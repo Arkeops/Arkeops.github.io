@@ -112,6 +112,14 @@ body {
     height: 5%;
 }
 
+.problema {
+    background-color: #0f070f;
+    top: 50%;
+    left: 72%;
+    width: 15%;
+    height: 5%;
+}
+
 /* Media queries para pantallas más pequeñas */
 @media (max-width: 768px) {
     .info-box {
