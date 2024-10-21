@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f0f4fd, #c1d8f0);  /* Degradado suave en el fondo */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.diagram-container {
+    position: relative;
+    width: 90vw;  /* Mantener el contenedor ajustado a la pantalla */
+    max-width: 1024px;  /* Limitar a 1024px en pantallas grandes */
+    height: auto;
+}
+
+.diagram-image {
+    width: 100%;  /* La imagen ocupa el ancho completo del contenedor */
+    height: auto;
+}
+
+/* Recuadros de información */
+.info-box {
+    position: absolute;
+    padding: 10px 15px;  /* Tamaño del padding más equilibrado */
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra suave */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    display: flex;  /* Para alinear el texto en el centro */
+    justify-content: center;  /* Centrar el texto horizontalmente */
+    align-items: center;  /* Centrar el texto verticalmente */
+    text-align: center;  /* Centrar el texto dentro del recuadro */
+    font-size: .9vw;  /* Tamaño de fuente que se ajusta a pantallas grandes */
+    transition: all 0.3s ease;  /* Transición suave al hacer hover */
+}
+
+.info-box a {
+    color: #fff;
+    text-decoration: none;
+    font-size: inherit;  /* Mantener el tamaño de fuente */
+    display: block;  /* Hacer que el enlace ocupe todo el recuadro */
+    width: 100%;  /* Ocupa el 100% del ancho del div */
+    height: 100%;  /* Ocupa el 100% de la altura del div */
+    display: flex;  /* Alinear el contenido dentro del enlace */
+    justify-content: center;  /* Centrar horizontalmente */
+    align-items: center;  /* Centrar verticalmente */
+}
+
+.info-box:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro al hacer hover */
+    transform: scale(1.35);  /* Efecto de crecimiento suave al hacer hover */
+}
+
+/* Posicionamiento ajustado para que coincidan con los cuadros de la imagen */
+
+/* Método */
+.method {
+    background-color: #007bff;
+    top: 12%;  /* Ajustado para pantallas grandes */
+    left: 30%;  /* Ajustado para pantallas grandes */
+    width: 12%;  /* Tamaño adecuado para el recuadro */
+    height: 5%;
+}
+
+/* Máquina */
+.machine {
+    background-color: #ff6347;
+    top: 15%;  /* Alineación superior ajustada */
+    left: 50%;
+    width: 12%;
+    height: 5%;
+}
+
+/* Material */
+.material {
+    background-color: #8b4513;
+    top: 17%;
+    left: 10%;
+    width: 12%;
+    height: 6%;
+}
+
+/* Mano de obra */
+.manpower {
+    background-color: #ff0000;
+    top: 74%;
+    left: 12%;
+    width: 12%;
+    height: 5%;
+}
+
+/* Medio ambiente */
+.environment {
+    background-color: #32cd32;
+    top: 79%;
+    left: 33%;
+    width: 15%;
+    height: 5%;
+}
+
+/* Medición */
+.measurement {
+    background-color: #800080;
+    top: 76%;
+    left: 54%;
+    width: 15%;
+    height: 5%;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .info-box {
+        font-size: 1.2vw;  /* Ajuste del tamaño de la fuente en pantallas más pequeñas */
+        padding: 8px 12px;
+    }
+
+    .method, .machine, .material, .manpower, .environment, .measurement {
+        width: 16%;
+        height: 6%;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-box {
+        font-size: 1.5vw;  /* Tamaño de fuente ajustado para pantallas pequeñas */
+        padding: 6px 10px;
+    }
+
+    .method, .machine, .material, .manpower, .environment, .measurement {
+        width: 22%;
+        height: 8%;
+    }
+}
